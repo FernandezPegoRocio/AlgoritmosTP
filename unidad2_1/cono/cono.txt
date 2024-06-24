@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main ()
+
+    int main () 
+{
+    double radio, altura;
+    double volumen;
+    cout<< "double = 14,5 "; 
+    cin >> "double = 26,79";
+    Cin >> altura;
+    cout (3.14*(14.5)2/26.79)/3;
+    cout << "el area base de un triángulo de base" << base;
+        <<"y altura" <<altura<< es: area << endl;
+}

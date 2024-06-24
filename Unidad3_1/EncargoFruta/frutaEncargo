@@ -1,0 +1,109 @@
+//Un Verdulería nos pide que armemos el pedido para el mayorista 
+//para lo cual deberemos pedir:
+//al usuario 
+//el código proveedor, 
+//razón social, 
+//fecha de solicitud 
+//fecha de entrega. 
+//Las frutas estarán enumeradas (tomar solo 6 a modo de ejemplo), 
+//mostrando los datos por pantalla.
+#include <iostream>
+#include <string>
+using namespace std;
+//clase de frutas
+enum class fruit {
+                  manzana,
+                  mandarina,
+                  naranja,
+                  banana,
+                  pera,
+                  limón};
+
+//código proveedor
+enum class code {
+                  401. manzana,
+                  402. mandarina,
+                  403. naranja,
+                  404. banana,
+                  405. pera,
+                  406. limón};
+int main(){
+// primero usuario, código, razón social, fecha de solicitud, fecha de entrega. 
+//ingles     user,  code,   businessName, applicationDate,    deadLine
+string user, code, businessName, applicationDate, deadLine
+int opcionFruit, opcionCode;
+// usuario user
+            
+    cout << "Ingresa tu Usuario: ";
+    cin >> user;
+    cout<<"Ingresa código: ";
+    getline(cin, code);
+// Selección de codigo de fruta
+    cout << "Seleccione la fruta:" << endl;
+    cout << "401. manzana" << endl;
+    cout << "402. mandarina" << endl;
+    cout << "403- naranja" << endl;
+    cout << "404- banana" << endl;
+    cout << "405- pera" << endl;
+    cout << "406- limón" << endl;
+    cin >> opcionFruit;
+    switch (opcionCode) { 
+    case code::401;
+    cout << "401. manzana" << endl;
+    break;
+    case code::402;
+    cout << "402. mandarina" << endl;
+    break;
+    case code::403;
+    cout << "403. naranja" << endl;
+    break;
+    case code::404;
+    cout << "404. banana" << endl;
+    break;
+    case code::405;
+    cout << "405. pera" << endl;
+    break;
+    case code::406;
+    cout << "406. pera" << endl;
+    break;
+    }      
+    cout<<"Ingresa tu razón social:";
+    getline(cin, businessName);
+    cout << "Ingrese la fecha de solicitud en formato dd.mm.aa: ";
+    getline(cin, fecha);
+    cout << "Ingrese la fecha de entrega en formato dd.mm.aa: ";
+    getline(cin, fecha);
+          
+// Selección de frutas para encargar
+    cout << "Seleccione la fruta:" << endl;
+    cout << "1- manzana" << endl;
+    cout << "2- mandarina" << endl;
+    cout << "3- naranja" << endl;
+    cout << "4- banana" << endl;
+    cout << "5- pera" << endl;
+    cout << "6- limón" << endl;
+    cin >> opcionFruit;
+            
+    switch (opcionFruit) {
+        case fruit::manzana;
+        cout << "manzana" << endl;
+        break;
+        case fruit::mandarina;
+        cout << "mandarina" << endl;
+        break;
+        case fruit::naranja;
+        cout << "naranja" << endl;
+        break;
+        case fruit::banana;
+        cout << "banana" << endl;
+        break;
+        case fruit::pera;
+        cout << "pera" << endl;
+        break;
+        case fruit::limon;
+        cout << "limon" << endl;
+        break;
+        }
+            
+return 0;
+}

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "volumenhabitacion": "cpp",
+        "iostream": "cpp",
+        "cmath": "cpp"
+    }
+}

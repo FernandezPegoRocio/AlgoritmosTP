@@ -1,0 +1,22 @@
+//Un programa que resuelva la siguiente función lineal 
+//con salida x consola, deber pedir 4 valores para x dando le valor de y por consola.: 
+//y=2x +1
+
+#include <iostream>
+using namespace std;
+//pedir que se ingrese los valores de x para poder calcular y
+//se usa la funcion y= 2x + 1
+double obtenerY(double x){
+    return 2 * x +1;
+}
+int main (){
+    double x, y;
+    //ingresar valor para x
+    cout << "ingresa el valor de x:";
+    cin >> x;
+
+    //ya teniendo los datos, se hace la operación
+    cout<< "x es =" << x << "y es =" << y << endl;
+
+    return 0;
+}

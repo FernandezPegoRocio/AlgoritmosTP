@@ -1,0 +1,93 @@
+//Un empresA nos pide el armado de una App para la toma de pedidos, 
+//primero deberá presentar un menú de Opciones de 4 productos
+// -Simple
+// -medio
+// -calidad
+// -Premiun,
+//luego nos deberá mostrar en menú de tipo de envio:
+// -normal 
+// -express 
+// -Fast Delivery
+//A posteriori deberá mostrar por consola el producto seleccionado y el tipo de envío que eligió.
+//PD. Usar Funciones, manteniendo un Main lo “mas pequeño posible”, desacoplando las funcionalidades. 
+//Trabajar con la visibilidad de los operadores vistos, while Switch If ….
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int menuProductos(){
+    int opcion;
+//primero deberá presentar un menú de Opciones de 4 productos Simple-medio-calidad-Premiun.
+    cout << "Armado del pedido" << endl;
+    cout << "selecciona entre el producto de interes :";
+    cout << "1. simple :";
+    cout << "2. medio :";
+    cout << "3. calidad :";
+    cout << "4. premiun :";
+    cout << "el producto seleccionado es: ";
+    cin  >> opcion;
+    return opcion;
+}
+//luego nos deberá mostrar en menú de tipo de envio:-normal-express-Fast Delivery
+int menuEnvios(){
+    {
+    cout << "Armado del pedido" << endl;
+    cout << "selecciona el tipo de envio :";
+    cout << "1. normal :";
+    cout << "2. express :";
+    cout << "3. Fast Delivery :";
+    cout << "el envio seleccionado es: ";
+    cin  >> opcion;
+    return opcion;
+}
+
+string menuProductos (int opcion){
+    switch (opcion){
+        case 1:
+        return "simple";
+        case 2:
+        return "medio";
+        case 3:
+        return "calidad";
+        case 4:
+        return "premiun";
+        default: //opción invalida, prueba nuevamente
+        return "no valido, intenta nuevamente";
+    }
+}
+
+string menuEnvios (int opcion){
+    switch (opcion){
+        case 1:
+        return "normal";
+        case 2:
+        return "express";
+        case 3:
+        return "fast delivery";
+        default: //opción invalida, prueba nuevamente
+        return "no valido, intenta nuevamente";
+        }
+}
+int main(){
+    opcionProductos, opcionEnvios;
+
+    opcionProductos = menuProductos();
+    while (opcionProductos < 1 || opcionProductos > 4 )
+    cout << " opcion no valida, intenta nuevamente";
+    cin  >> opcionProductos;
+}
+    opcionEnvios = menuEnvios();
+    while (opcionEnvios < 1 || opcionEnvios > 3 ){
+    cout << " opcion no valida, intenta nuevamente";
+    cin  >> opcionEnvios;
+}
+    string nombreProductos = obtenerNombreProducto(opcionProductos);
+    string tipoEnvios = obtenerTipoEnvio(opcionEnvios);
+
+    cout << "\n El pedido realizado es :"<< endl;
+    cout << "El producto encargado es :"<< nombreProductos <<endl;
+    cout << "El envio seleccionado es :"<< tipoEnvios <<endl;
+return 0;
+
+}
